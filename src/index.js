@@ -360,9 +360,9 @@ const handleCallback = async (request, env) => {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify(requestBody),
+      body: new URLSearchParams(requestBody),
     });
   } catch {
     //
